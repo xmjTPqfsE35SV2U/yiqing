@@ -25,6 +25,15 @@ body{
 .bg-col-4169E2{
     background-color: #4169e2;
 }
+.bg-col-FFFFFF{
+    background-color: #FFFFFF;
+}
+.bg-col-F3F3F3{
+    background-color: #F3F3F3;
+}
+.bg-col-EBEBEB{
+    background-color: #EBEBEB;
+}
 /* 字体*/
 .fn-18{
     font-size: 0.36rem;
@@ -38,13 +47,21 @@ body{
 .fn-12{
     font-size: 0.24rem;
 }
+.fn-0{
+    font-size: 0;
+}
 .fn-w-900{
     font-weight: 900;
 }
-
 /* 布局 */
 .flex-row{
     display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-3{
+    flex: 3;
 }
 .justify-content-around{
     justify-content: space-around;
@@ -55,28 +72,64 @@ body{
 .tx-l{
     text-align: left;
 }
-
+.tx-r{
+    text-align: right;
+}
+.tx-c{
+    text-align: center;
+}
 .margin-r-8{
     margin-right: 0.16rem;
 }
-/*  */
+/* 边距 */
 .padding-l-10{
     padding-left: 0.2rem;
 }
 .padding-r-10{
-    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
-
-
+.padding-t-10{
+    padding-top: 0.2rem;
+}
+.padding-b-10{
+    padding-bottom: 0.2rem;
+}
+.margin-t-10{
+    margin-top: 0.2rem;
+}
+.margin-r-10{
+    margin-right: 0.2rem;
+}
+.margin-b-10{
+    margin-bottom: 0.2rem;
+}
 li{
     list-style: none;
 }
-
-/*  */
+/* 宽 */
+.w-1{
+    width: 0.02rem;
+}
 .w-4{
     width: 0.08rem;
 }
-
+.w-10{
+    width: 0.2rem;
+}
+/* 高 */
 .h-16{
     height: 0.32rem;
+}
+.h-10{
+    height: 0.2rem;
+}
+.h-32{
+    height: 0.64rem;
+}
+.h-ln-32{
+    line-height: 0.64rem;
+}
+/* 定位 */
+.relative{
+    position: relative;
 }

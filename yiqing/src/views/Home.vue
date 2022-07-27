@@ -6,10 +6,10 @@
     <!-- title -->
     <div>
       <p class="col-FF0000 fn-18">武汉2019-nCoV疫情实时情况</p>
-      <p class="fn-16">武汉加油！中国加油！</p>
+      <p class="fn-16 margin-t-10 margin-b-10">武汉加油！中国加油！</p>
     </div>
     <!-- navTop -->
-    <div>
+    <div class="margin-t-10 margin-b-10">
       <ul class="fn-16 flex-row fn-w-900 justify-content-around">
         <li>疫情地图</li>
         <li>实时播报</li>
@@ -18,10 +18,10 @@
       </ul>
     </div>
     <!--  -->
-    <div>
+    <div class="margin-t-10 margin-b-10">
       <p class="fn-12 tx-l padding-l-10">截至2022-10-10 19:00:00 全国数据统计：</p>
     </div>
-    <div class="flex-row justify-content-around">
+    <div class="margin-t-10 margin-b-10 flex-row justify-content-around">
       <div>
         <p class="fn-16">{{count_yq.tx1}}</p>
         <p class="fn-12">确诊病例</p>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <!-- 疫情信息 -->
-    <div class="fn-12 tx-l padding-l-10">
+    <div class="fn-12 tx-l padding-l-10 padding-r-10">
       <p>{{information_bindu.note1}}</p>
       <p>{{information_bindu.note2}}</p>
       <p>{{information_bindu.note3}}</p>
@@ -48,8 +48,8 @@
       <p>{{information_bindu.remark2}}</p>
     </div>
     <!-- 疫情地图 -->
-    <div>
-      <div class="fn-16">疫情地图</div>
+    <div class="">
+      <div class="fn-16 margin-t-10 margin-b-10">疫情地图</div>
       <div>
         <img class="w-100-100 h-100-100" src="http://49.232.173.220:3001/images/distribution-nationale.png?time=1658825991077"/>
       </div>
