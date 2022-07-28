@@ -21,9 +21,15 @@ body{
 .col-FF0000{
     color: #FF0000;
 }
+.col-FFFFFF{
+    color: #FFFFFF;
+}
+.col-4169E2{
+    color: #4169E2;
+}
 /* 背景颜色 */
 .bg-col-4169E2{
-    background-color: #4169e2;
+    background-color: #4169E2;
 }
 .bg-col-FFFFFF{
     background-color: #FFFFFF;
@@ -33,6 +39,9 @@ body{
 }
 .bg-col-EBEBEB{
     background-color: #EBEBEB;
+}
+.bg-col-2834B9{
+    background-color: #2834B9;
 }
 /* 字体*/
 .fn-18{
@@ -66,6 +75,10 @@ body{
 .justify-content-around{
     justify-content: space-around;
 }
+.justify-content-end{
+    /* justify-content: space-around; */
+    justify-content: flex-end;
+}
 .align-items-c{
     align-items: center;   
 }
@@ -82,8 +95,14 @@ body{
     margin-right: 0.16rem;
 }
 /* 边距 */
+.padding-l-5{
+    padding-left: 0.1rem;
+}
 .padding-l-10{
     padding-left: 0.2rem;
+}
+.padding-r-5{
+    padding-right: 0.1rem;
 }
 .padding-r-10{
     padding-right: 0.2rem;
@@ -97,11 +116,21 @@ body{
 .margin-t-10{
     margin-top: 0.2rem;
 }
+.margin-l-10{
+    margin-left: 0.2rem;
+}
 .margin-r-10{
     margin-right: 0.2rem;
 }
 .margin-b-10{
     margin-bottom: 0.2rem;
+}
+/* 圆角 */
+.border-r-5{
+    border-radius: 0.1rem;
+}
+.border-r-10{
+    border-radius: 0.2rem;
 }
 li{
     list-style: none;
@@ -133,3 +162,7 @@ li{
 .relative{
     position: relative;
 }
+.text-indent-2{
+    text-indent: 2em;
+}
+

@@ -1,7 +1,7 @@
 <template>
     <div class="RealTimeBroadcast">
       <!-- 实时播报 -->
-      <div>
+      <div class="">
         <p class="h-32 ln-h-32 padding-l-10 fn-16 fn-w-900 tx-l flex-row align-items-c"><span class="w-4 h-16 bg-col-4169E2 inline-block margin-r-8"></span>实时播报</p>
       </div>
       <div class="padding-t-10 bg-col-F3F3F3">
@@ -14,8 +14,8 @@
             <div class="w-1 h-100-100 bg-col-EBEBEB soli"></div>
           </div>
           <div class="flex-3 margin-r-10 margin-b-10">
-            <div class="bg-col-FFFFFF padding-l-10 padding-r-10">
-              <div class="fn-16 fn-w-900 padding-t-10 padding-b-10">{{item.title}}</div>
+            <div class="bg-col-FFFFFF tx-l padding-l-10 padding-r-10">
+              <div class="fn-16 fn-w-900 padding-t-10 padding-b-10 border-1">{{item.title}}</div>
               <div class="fn-12 tx-l"><p class="ln-h-p">{{item.summary}}</p></div>
               <div class="fn-12 tx-r padding-t-10 padding-b-10">来源：{{item.infoSource}}</div>
             </div>
@@ -23,17 +23,18 @@
         </div>
       </div>
       <!-- 按钮 -->
-      <div class="flex-row justify-content-around">
-        <div class="fn-16 tx-c btn-120">查看更多</div>
-      </div>
+      <ButtonQxVue></ButtonQxVue>
     </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Request from '@/assets/js/Request'
-
+import ButtonQxVue from './ButtonQx.vue'
 export default defineComponent({
   name: 'RealTimeBroadcast',
+  components: {
+    ButtonQxVue
+  },
   data () {
     return {
       // as 断言处理 该类型已知，无需对其进行判断
@@ -43,7 +44,7 @@ export default defineComponent({
   methods: {
     getTimelineService () {
       Request.get('data/getTimelineService').then((res:any) => {
-        console.log(res.data)
+        // console.log(res.data)
         this.infoObj.push(res.data[0])
         this.infoObj.push(res.data[1])
         this.infoObj.push(res.data[2])
@@ -67,14 +68,11 @@ export default defineComponent({
     position: absolute;
     right: 0.2rem;
   }
-  .btn-120{
-    width: 2.4rem;
-    height: 0.8rem;
-    line-height: 0.8rem;
-    border: 0.02rem solid blue;
-    border-radius: 0.4rem;
-  }
   .ln-h-p{
     line-height: 1.5;
+  }
+  .border-1{
+    border-top: 0.02rem solid #F3F3F3;
+    border-bottom: 0.02rem solid #F3F3F3;
   }
 </style>

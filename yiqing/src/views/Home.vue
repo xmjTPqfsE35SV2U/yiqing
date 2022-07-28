@@ -21,7 +21,7 @@
     <div class="margin-t-10 margin-b-10">
       <p class="fn-12 tx-l padding-l-10">截至2022-10-10 19:00:00 全国数据统计：</p>
     </div>
-    <div class="margin-t-10 margin-b-10 flex-row justify-content-around">
+    <div class="padding-t-10 padding-b-10 border-1 flex-row justify-content-around">
       <div>
         <p class="fn-16">{{count_yq.tx1}}</p>
         <p class="fn-12">确诊病例</p>
@@ -32,15 +32,15 @@
       </div>
       <div>
         <p class="fn-16">{{count_yq.tx3}}</p>
-        <p class="fn-12">死亡人数</p>
+        <p class="fn-12">治愈人数</p>
       </div>
       <div>
         <p class="fn-16">{{count_yq.tx4}}</p>
-        <p class="fn-12">治愈人数</p>
+        <p class="fn-12">死亡人数</p>
       </div>
     </div>
     <!-- 疫情信息 -->
-    <div class="fn-12 tx-l padding-l-10 padding-r-10">
+    <div class="fn-12 tx-l padding-t-10 padding-l-10 padding-r-10">
       <p>{{information_bindu.note1}}</p>
       <p>{{information_bindu.note2}}</p>
       <p>{{information_bindu.note3}}</p>
@@ -56,6 +56,16 @@
     </div>
     <!-- 实时播报 -->
     <RealTimeBroadcastVue></RealTimeBroadcastVue>
+    <!-- 辟谣与防护 -->
+    <RefutingRumorsAndProtectionVue></RefutingRumorsAndProtectionVue>
+    <!-- 防疫知识合集 -->
+    <EpidemicPreventionVue></EpidemicPreventionVue>
+    <!-- 疾病知识 -->
+    <DiseaseKnowledge></DiseaseKnowledge>
+    <!-- 分享 -->
+    <!-- <div class="flex-row justify-content-around bg-col-F3F3F3">
+        <div class="fn-16 tx-c btn-120">分享</div>
+    </div> -->
   </div>
 </template>
 
@@ -63,7 +73,10 @@
 // 项目使用别名进行模块导入
 import Request from '@/assets/js/Request'
 import RealTimeBroadcastVue from '@/components/RealTimeBroadcast.vue'
+import RefutingRumorsAndProtectionVue from '@/components/RefutingRumorsAndProtection.vue'
+import EpidemicPreventionVue from '@/components/EpidemicPrevention.vue'
 import { defineComponent } from 'vue'
+import DiseaseKnowledge from '@/components/DiseaseKnowledge.vue'
 
 // const url =
 export default defineComponent({
@@ -86,7 +99,10 @@ export default defineComponent({
     }
   },
   components: {
-    RealTimeBroadcastVue
+    RealTimeBroadcastVue,
+    RefutingRumorsAndProtectionVue,
+    EpidemicPreventionVue,
+    DiseaseKnowledge
   },
   methods: {
     getStatisticsService () {
@@ -114,3 +130,16 @@ export default defineComponent({
 })
 
 </script>
+<style scoped>
+  .btn-120{
+    width: 2.4rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border: 0.02rem solid blue;
+    border-radius: 0.4rem;
+  }
+  .border-1{
+    border-top: 0.02rem solid #F3F3F3;
+    border-bottom: 0.02rem solid #F3F3F3;
+  }
+</style>
